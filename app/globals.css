@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* variables */
+:root {
+  --tab-bg: #f2f0f0;
+  --selected-bg: #0078ee;
+  --tab-text: #2b3343;
+  --selected-text: #ffffff;
+  --button-bg: #0078ee;
+  --button-hover: #0084ff;
+  --button-text: #ffffff;
+}
+
 /* Reset and base styles  */
 * {
   padding: 0px;
@@ -50,8 +61,10 @@ p {
 }
 
 ul,
-ul li {
-  list-style: none;
+ol,
+ul li,
+ol li {
+  list-style-position: inside;
 }
 
 img {
@@ -115,4 +128,29 @@ legend {
 
 body {
   min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #adb6bf66;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0078ee;
+  border-radius: 46px;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+@supports (scrollbar-color: #0078ee #adb6bf66) {
+  * {
+    scrollbar-color: #0078ee #adb6bf66;
+    scrollbar-width: thin;
+  }
 }

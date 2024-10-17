@@ -6,11 +6,16 @@ import { TabContent } from "@/types";
 type Props = TabContent;
 
 const Tab = ({ title, body, id }: Props) => {
+  const activeTab = useStore((state) => state.activeTab);
   const handleCLick = useStore((state) => state.updateActiveTab);
 
   return (
     <div
-      className="hover:cursor-pointer bg-tab  px-5 py-6"
+      className={`hover:cursor-pointer px-5 py-6 ${
+        id === activeTab
+          ? "bg-selected-bg text-selected-text"
+          : "bg-tab-bg text-tab-text"
+      }`}
       onClick={() => handleCLick(id)}
     >
       <h3 className="font-medium text-2xl">{title}</h3>

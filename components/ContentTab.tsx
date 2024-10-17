@@ -9,8 +9,7 @@ const ContentTab = () => {
   const activeTab = useStore((state) => state.activeTab);
 
   return (
-    <div>
-      <h3>Контент таба {activeTab}</h3>
+    <div className="bg-tab-bg p-5">
       {activeTab === 1 ? <Content /> : <Form />}
     </div>
   );

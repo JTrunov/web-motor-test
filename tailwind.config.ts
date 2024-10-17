@@ -9,8 +9,21 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        tab: "#F2F0F0",
+        tab: {
+          bg: "var(--tab-bg)",
+          text: "var(--tab-text)",
+        },
+
+        selected: {
+          bg: "var(--selected-bg)",
+          text: "var(--selected-text)",
+        },
+
+        button: {
+          bg: "var(--button-bg)",
+          hover: "var(--button-hover)",
+          text: "var(--button-text)",
+        },
       },
     },
   },
