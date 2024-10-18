@@ -11,6 +11,8 @@
   --button-bg: #0078ee;
   --button-hover: #0084ff;
   --button-text: #ffffff;
+  --input-text: #adb6bf;
+  --input-border: #0078ee;
 }
 
 /* Reset and base styles  */
@@ -137,6 +139,7 @@ body {
 ::-webkit-scrollbar-track {
   background: #adb6bf66;
   border-radius: 4px;
+  margin-block: 0.7rem;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -148,7 +151,7 @@ body {
   display: none;
 }
 
-@supports (scrollbar-color: #0078ee #adb6bf66) {
+@supports (scrollbar-width: #0078ee #adb6bf66) {
   * {
     scrollbar-color: #0078ee #adb6bf66;
     scrollbar-width: thin;

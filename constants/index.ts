@@ -18,4 +18,26 @@ const tabs: TabContent[] = [
   },
 ];
 
-export { tabs };
+const inputs: {
+  name: "name1" | "name2" | "name3";
+  placeholder: string;
+  required: boolean;
+}[] = [
+  {
+    name: "name1",
+    placeholder: "Имя*",
+    required: true,
+  },
+  {
+    name: "name2",
+    placeholder: "Имя*",
+    required: true,
+  },
+  {
+    name: "name3",
+    placeholder: "Имя*",
+    required: true,
+  },
+];
+
+export { tabs, inputs };

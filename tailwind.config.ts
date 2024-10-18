@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        lg: "1295px",
+      },
       colors: {
         tab: {
           bg: "var(--tab-bg)",
@@ -23,6 +26,11 @@ const config: Config = {
           bg: "var(--button-bg)",
           hover: "var(--button-hover)",
           text: "var(--button-text)",
+        },
+
+        input: {
+          text: "var(--input-text)",
+          border: "var(--input-border)",
         },
       },
     },
